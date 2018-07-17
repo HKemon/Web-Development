@@ -1,0 +1,14 @@
+{
+    "name": "scss_project01",
+    "version": "1.0.0",
+    "description": "This is scss first project",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    },
+    "author": "emon",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^4.9.0"
+    }
+}
