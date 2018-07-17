@@ -43,8 +43,23 @@ body {
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  background-color: #f4f2f2;
+  background-color: #faf9f9;
   -webkit-box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
   box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
   min-height: 50rem; }
+
+.header {
+  height: 7rem;
+  background-color: #ffffff; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: #333;
+  flex: 0 0 18%; }
+
+.hotel-view {
+  background-color: #ffffff;
+  flex: 1; }
