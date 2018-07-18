@@ -11,9 +11,13 @@
 }
 
 .header{
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #ffffff;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content{
