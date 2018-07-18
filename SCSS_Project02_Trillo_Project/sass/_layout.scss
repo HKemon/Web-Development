@@ -1,4 +1,4 @@
-.container{
+.container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: $color-grey-light-1;
@@ -10,33 +10,119 @@
   min-height: 50rem;
 }
 
-.header{
+.header {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #ffffff;
+  border-bottom: 1px solid $color-grey-light-2;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.content{
+.content {
   display: flex;
 }
 
-.sidebar{
+.sidebar {
   background-color: $color-grey-dark-1;
 
-  flex: 0 0 18%;  // flex-grow , flex-shrink , flex-basis
+  flex: 0 0 18%; // flex-grow , flex-shrink , flex-basis
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.hotel-view{
+.hotel-view {
   background-color: #ffffff;
   flex: 1;
 
   height: 80rem;
+}
+
+// Gallery
+.gallery {
+  display: flex;
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+// Hotel Overview
+.overview {
+  display: flex;
+  border-bottom: 1px solid $color-grey-light-2;
+  align-items: center;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    //flex: 1;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: $color-primary;
+  }
+
+  &__location {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__rating {
+    background-color: $color-primary;
+    color: #ffffff;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -4.5px;
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+// Btn Inline
+.btn-inline {
+  border: none;
+  color: $color-primary;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-grey-dark-1;
+  }
 }
