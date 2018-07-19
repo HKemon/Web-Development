@@ -265,7 +265,8 @@ body {
   border: none;
   background-image: linear-gradient(to right, #FF3366, #BA265D);
   color: #ffffff;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .btn > * {
     display: inline-block;
     height: 100%;

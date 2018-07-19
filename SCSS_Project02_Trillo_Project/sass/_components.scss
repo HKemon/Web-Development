@@ -343,6 +343,7 @@
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
   color: #ffffff;
   position: relative;
+  overflow: hidden;
 
   & > * {
     display: inline-block;
@@ -363,11 +364,11 @@
     top: -100%;
   }
 
-  &:hover &__visible{
+  &:hover &__visible {
     transform: translateY(100%);
   }
 
-  &:hover &__invisible{
+  &:hover &__invisible {
     top: 0;
   }
 }
