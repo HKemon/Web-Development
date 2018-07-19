@@ -205,6 +205,49 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
 
+.review {
+  background-color: #ffffff;
+  box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem; }
+  .review__user-date {
+    font-size: 1rem;
+    color: #999; }
+  .review__rating {
+    color: #eb2f64;
+    font-size: 2.2rem;
+    font-weight: 300; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -8.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: #f4f2f2;
+    font-family: sans-serif;
+    z-index: 1; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -292,17 +335,22 @@ body {
   display: inline-block;
   background-color: transparent;
   cursor: pointer; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: all 0.2s; }
   .btn-inline:hover {
     color: #333; }
+    .btn-inline:hover span {
+      margin-left: 8px; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: #faf9f9;
   border-bottom: 1px solid #f4f2f2; }
 
 .description {
-  font-size: 1.4rem;
   background-color: #ffffff;
   -webkit-box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.06);
@@ -312,5 +360,7 @@ body {
   margin-right: 4.5rem; }
 
 .user-review {
-  background-color: yellowgreen;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }

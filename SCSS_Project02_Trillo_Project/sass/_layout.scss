@@ -120,12 +120,22 @@
   background-color: transparent;
   cursor: pointer;
 
+  & span {
+    margin-left: 3px;
+    transition: all 0.2s;
+  }
+
   &:hover {
     color: $color-grey-dark-1;
+
+    span {
+      margin-left: 8px;
+    }
   }
 }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: $color-grey-light-1;
@@ -133,7 +143,6 @@
 }
 
 .description {
-  font-size: 1.4rem;
   background-color: #ffffff;
 
   -webkit-box-shadow: $shadow-light;
@@ -146,6 +155,9 @@
 }
 
 .user-review {
-  background-color: yellowgreen;
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
