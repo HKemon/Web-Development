@@ -8,6 +8,10 @@
   box-shadow: $shadow-dark;
 
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+  }
 }
 
 .header {
@@ -19,10 +23,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -46,66 +60,6 @@
   &__photo {
     width: 100%;
     display: block;
-  }
-}
-
-// Hotel Overview
-.overview {
-  display: flex;
-  border-bottom: $line;
-  align-items: center;
-
-  &__heading {
-    font-size: 2.25rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1.5rem 3rem;
-  }
-
-  &__stars {
-    //flex: 1;
-    margin-right: auto;
-  }
-
-  &__icon-star,
-  &__icon-location {
-    width: 1.75rem;
-    height: 1.75rem;
-    fill: $color-primary;
-  }
-
-  &__location {
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-  }
-
-  &__icon-location {
-    margin-right: 0.5rem;
-  }
-
-  &__rating {
-    background-color: $color-primary;
-    color: #ffffff;
-    margin-left: 3rem;
-    align-self: stretch;
-    padding: 0 2.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__rating-average {
-    font-size: 2.25rem;
-    font-weight: 300;
-    margin-bottom: -4.5px;
-  }
-
-  &__rating-count {
-    font-size: 0.8rem;
-    text-transform: uppercase;
   }
 }
 
@@ -140,6 +94,14 @@
   padding: 4.5rem;
   background-color: $color-grey-light-1;
   border-bottom: $line;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -152,6 +114,16 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .user-review {
