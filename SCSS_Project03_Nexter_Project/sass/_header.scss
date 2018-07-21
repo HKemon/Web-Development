@@ -31,18 +31,17 @@
     color: $color-grey-light-2;
 
     &::before,
-    &::after{
+    &::after {
       content: "";
       height: 1px;
       display: block;
       background-color: currentColor;
     }
-
   }
 
   &__seenon-logos {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 3rem;
     justify-items: center;
 
