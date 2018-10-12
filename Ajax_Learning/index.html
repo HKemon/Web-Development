@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+</head>
+<body>
+<button id="button">Get Text File</button>
+<div id="text"></div>
+
+<button id="button1">Get User</button>
+<button id="button2">Get Users</button>
+<div id="showUser"></div>
+<div id="showUsers"></div>
+<br><br>
+<div id="user"></div>
+<div id="users"></div>
+
+<script>
+    // 1st Example
+    // READY STATE values
+    // Value	State	                    Description
+    // 0	    UNSENT	                    Client has been created. open() not called yet.
+    // 1	    OPENED	                    open() has been called.
+    // 2	    HEADERS_RECEIVED	        send() has been called, and headers and status are available.
+    // 3	    LOADING	Downloading;        responseText holds partial data.
+    // 4	    DONE	                    The operation is complete.
+
+    function loadText() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'sample.txt');
+
+        console.log("READY STATE: " + xhr.readyState);
+
+        xhr.onload = function () {
+            console.log("READY STATE: " + xhr.readyState);
+            if (this.status === 200) {
+                document.getElementById('text').innerHTML = this.responseText;
+            } else if (this.status === 404) {
+                document.getElementById('text').innerHTML = "Not Found";
+            }
+        };
+
+        // xhr.onreadystatechange = function () {
+        //     console.log("READY STATE: " + xhr.readyState);
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         console.log(this.responseText);
+        //     }
+        // };
+
+        xhr.send();
+    }
+
+    document.getElementById('button').addEventListener('click', loadText);
+</script>
+<script>
+    // 2nd Example
+
+    document.getElementById('button1').addEventListener('click', loadUser);
+    document.getElementById('button2').addEventListener('click', loadText);
+
+    function loadUser() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'user.json');
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                // document.getElementById('showUser').innerHTML = this.responseText;
+                let user = JSON.parse(this.responseText);
+
+                let output = '';
+                output +=
+                    '<ul>' +
+                    '<li>Id: ' + user.id + '</li>' +
+                    '<li>name: ' + user.name + '</li>' +
+                    '<li>email: ' + user.email + '</li>' +
+                    '<ul>';
+                document.getElementById('showUser').innerHTML = output;
+            } else if (this.status === 404) {
+                document.getElementById('showUser').innerHTML = "No User Found";
+            }
+        };
+
+        xhr.send();
+    }
+</script>
+</body>
+</html>

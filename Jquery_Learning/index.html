@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Tutorials</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write("<script src='../Jquery_Ajax_learning/AutoRefresh/jquery-3.3.1.js'><\/script>");
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // $('#btn').one('click',function () {
+            //     $('#test').load("debug.log");
+            // });
+            $.get('debug.log', function (data) {
+                $('#test').html(data);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="test"><p>This is a paragraph</p></div>
+<input id="btn" type="button" value="hello"/>
+</body>
+</html>

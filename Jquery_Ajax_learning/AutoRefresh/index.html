@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Password</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write("<script src='jquery-3.3.1.js'><\/script>");
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#btn_tweet').click(function () {
+                var tweet_text = $('#tweet').val();
+                if ($.trim(tweet_text) != null) {
+
+                    $.get('test.html', {tweet: tweet_text}, function (data) {
+                        $('#tweet').val("fsfs");
+                    });
+
+
+                    alert("fsfsf");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<br>
+<form action="insert.php" method="post">
+    <textarea name="tweet" id="tweet"></textarea>
+    <button type="button" id="btn_tweet" name="btn_tweet">Show</button>
+</form>
+<br>
+<br>
+<div id="load_tweet"></div>
+</body>
+</html>
