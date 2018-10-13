@@ -1,20 +1,31 @@
-class Person {
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
-    greeting() {
-        return (`Hello from ${this.firstName} ${this.lastName}`);
-    }
+function getJokes(e) {
+    const number = document.querySelector('input[type=number]').value;
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
+
+    xhr.onload = function () {
+        if (this.status === 200) {
+            const response = JSON.parse(this.responseText);
+
+            let output = '';
+
+            if (response.type === 'success') {
+                response.value.forEach(function (joke) {
+                    output += `<li>${joke.joke}</li>`;
+                });
+            } else {
+                output += '<li>Something is Wrong</li>';
+            }
+            document.querySelector('#jokes').innerHTML = output;
+
+        }
+    };
+
+    xhr.send();
+
+    e.preventDefault();
 }
-
-class Customer extends Person {
-    constructor(firstName, lastName){
-        super(firstName, lastName);
-    }
-}
-
-const john = new Customer('Mr.','john','YO');
-
-console.log(john.greeting());
