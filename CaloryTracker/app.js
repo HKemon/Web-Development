@@ -1,5 +1,3 @@
-// Storage
-
 // Item
 const ItemCtrl = (function () {
     // Item Constructor
