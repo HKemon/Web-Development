@@ -1,6 +1,7 @@
 import Search from './models/Search';
 import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
+import * as recipeView from './views/RecipeView';
 import {elements, renderLoader, clearLoader} from './views/base';
 
 const state = {
@@ -9,7 +10,6 @@ const state = {
 };
 
 // Search Controller
-
 const controlSearch = async () => {
     // Get query from view
     const query = searchView.getInput();
@@ -55,12 +55,13 @@ elements.searchResPages.addEventListener('click', e => {
 });
 
 // Recipe Controller
-
 const controlRecipe = async () => {
     const id = window.location.hash.replace('#', '');
     console.log(id);
 
     if (id) {
+        recipeView.clearRecipe();
+        renderLoader(elements.recipe);
         state.recipe = new Recipe(id);
 
         try {
@@ -69,7 +70,10 @@ const controlRecipe = async () => {
 
             state.recipe.calcTime();
             state.recipe.calServings();
-            console.log(state.recipe);
+
+            clearLoader();
+            recipeView.renderRecipe(state.recipe);
+
         } catch (e) {
             alert("Error Procession Recipe: " + e);
         }
