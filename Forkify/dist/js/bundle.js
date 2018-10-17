@@ -3780,22 +3780,9 @@ eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() {\r\n\tr
   !*** ./src/js/index.js ***!
   \*************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\nvar _test = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\nvar _test2 = _interopRequireDefault(_test);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.log(_test2.default); // Global app controller\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/test.js":
-/*!************************!*\
-  !*** ./src/js/test.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nconsole.log('Imported Module');\nexports.default = 253;\n\n//# sourceURL=webpack:///./src/js/test.js?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\.babelrc: Error while parsing JSON - Unexpected EOF at line 15 column 4 of the JSON5 data. Still to read: \\\"\\\"\\n    at error (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\json5\\\\lib\\\\json5.js:56:25)\\n    at word (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\json5\\\\lib\\\\json5.js:393:13)\\n    at value (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\json5\\\\lib\\\\json5.js:493:56)\\n    at Object.parse (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\json5\\\\lib\\\\json5.js:508:18)\\n    at ConfigChainBuilder.addConfig (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\file\\\\options\\\\build-config-chain.js:150:65)\\n    at ConfigChainBuilder.findConfigs (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\file\\\\options\\\\build-config-chain.js:96:16)\\n    at buildConfigChain (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\file\\\\options\\\\build-config-chain.js:61:13)\\n    at OptionManager.init (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\file\\\\options\\\\option-manager.js:354:58)\\n    at File.initOptions (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\file\\\\index.js:212:65)\\n    at new File (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\file\\\\index.js:135:24)\\n    at Pipeline.transform (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-core\\\\lib\\\\transformation\\\\pipeline.js:46:16)\\n    at transpile (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-loader\\\\lib\\\\index.js:50:20)\\n    at Object.module.exports (C:\\\\Personal\\\\Codding Practice\\\\Web Development\\\\Forkify\\\\node_modules\\\\babel-loader\\\\lib\\\\index.js:173:20)\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
